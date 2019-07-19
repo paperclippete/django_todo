@@ -1,3 +1,0 @@
-# set up git ignore on settings file to protect site/db security
-
-django_todo/settings.py
