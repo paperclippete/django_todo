@@ -83,9 +83,7 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # }
 
 DATABASES = {
-    'default': { 
-        dj_database_url.parse('postgres://ilecvuhmeenbvq:e1fd4586d93f653f209ff3ac360c120a232ff00cf7deadc5418277cb6c67bebb@ec2-54-247-170-5.eu-west-1.compute.amazonaws.com:5432/d9og0ccqb6jhif')
-    }
+    'default': dj_database_url.parse('postgres://ilecvuhmeenbvq:e1fd4586d93f653f209ff3ac360c120a232ff00cf7deadc5418277cb6c67bebb@ec2-54-247-170-5.eu-west-1.compute.amazonaws.com:5432/d9og0ccqb6jhif')
 }
 
 # Password validation
