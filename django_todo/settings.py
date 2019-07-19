@@ -26,8 +26,8 @@ SECRET_KEY = '#z*9^(%to04bs48i#9nw0ho!u+ctla#_#ev2o4mf!8z0edl)2o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['1b3a41f4088b42aa9e48bcfe19ff5df4.vfs.cloud9.us-east-1.amazonaws.com',
-                'alexa-django-todo.herokuapp.com',]
+ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'),
+                os.environ.get('HOSTNAME'),]
 
 
 # Application definition
@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse('postgres://ilecvuhmeenbvq:e1fd4586d93f653f209ff3ac360c120a232ff00cf7deadc5418277cb6c67bebb@ec2-54-247-170-5.eu-west-1.compute.amazonaws.com:5432/d9og0ccqb6jhif')
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
 # Password validation
